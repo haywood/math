@@ -50,7 +50,7 @@ A *one-to-one*, *onto*, *continuous* function between two metric spaces, with a 
 - **Isometry**
 A function \(f: X \to Y\), where \(X\) and \(Y\) are metric spaces, such that
 $$
-\forall x,y \in X, \rho_X(x,y) = \rho_Y(f(x),f(y))
+\rho_X(x,y) = \rho_Y(f(x),f(y)) \quad \forall x,y \in X
 $$
 
 #### Problems
