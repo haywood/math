@@ -1,4 +1,4 @@
-MARKDOWN := pandoc --standalone --from markdown_github --to html --mathjax="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+MARKDOWN := pandoc --standalone --from markdown_github --to html --mathjax="mathjax-2.4.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 all: html
 
