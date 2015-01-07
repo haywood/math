@@ -80,3 +80,38 @@ $$
         2.
         \(\rho(y,z) \leq \rho(x,y) + \rho(x,z)\) triangle inequality
         \(\rho(y,z) - \rho(x,z) \leq \rho(x,y)\) subtracting \(\rho(x,z)\)
+
+2. Verify that
+$$
+\left(\sum_{k=1}^n a_k b_k\right)^2 = \sum_{k=1}^n a_k^2 \sum_{k=1}^n b_k^2 - {1 \over 2} \sum_{i=1}^n \sum_{j=1}^n (a_i b_j - b_i a_j)^2
+$$
+
+Deduce the Cauchy-Schwarz inequality from this identity.
+
+Proof:
+Suppose that
+$$
+\left(\sum_{k=1}^n a_k b_k\right)^2 \ne \sum_{k=1}^n a_k^2 \sum_{k=1}^n b_k^2 - {1 \over 2} \sum_{i=1}^n \sum_{j=1}^n (a_i b_j - b_i a_j)^2 \\\\
+$$
+Then
+$$\begin{align}
+\left(\sum_{k=1}^n a_k b_k\right) \left(\sum_{k=1}^n a_k b_k\right) &\ne \sum_{k=1}^n a_k^2 \sum_{k=1}^n b_k^2 - {1 \over 2} \sum_{i=1}^n \sum_{j=1}^n (a_i b_j - b_i a_j)^2 \\\\
+\sum_{i=1}^n a_i b_i\sum_{j=1}^n a_j b_j &\ne \sum_{k=1}^n a_k^2 \sum_{k=1}^n b_k^2 - {1 \over 2} \sum_{i=1}^n \sum_{j=1}^n (a_i b_j - b_i a_j)^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{k=1}^n a_k^2 \sum_{k=1}^n b_k^2 - {1 \over 2} \sum_{i=1}^n \sum_{j=1}^n (a_i b_j - b_i a_j)^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{k=1}^n a_k^2 \sum_{k=1}^n b_k^2 - {1 \over 2} \sum_{i=1}^n \sum_{j=1}^n a_i^2 b_j^2 - 2 a_i b_i a_j b_j + b_i^2 a_j^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{k=1}^n a_k^2 \sum_{k=1}^n b_k^2 + {1 \over 2} \sum_{i=1}^n \sum_{j=1}^n - a_i^2 b_j^2 + 2 a_i b_i a_j b_j - b_i^2 a_j^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{k=1}^n a_k^2 \sum_{k=1}^n b_k^2 + \sum_{i=1}^n \sum_{j=1}^n - {1 \over 2} a_i^2 b_j^2 + a_i b_i a_j b_j - {1 \over 2} b_i^2 a_j^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{i=1}^n a_i^2 \sum_{j=1}^n b_j^2 + \sum_{i=1}^n \sum_{j=1}^n - {1 \over 2} a_i^2 b_j^2 + a_i b_i a_j b_j - {1 \over 2} b_i^2 a_j^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{i=1}^n \sum_{j=1}^n a_i^2 b_j^2 + \sum_{i=1}^n \sum_{j=1}^n - {1 \over 2} a_i^2 b_j^2 + a_i b_i a_j b_j - {1 \over 2} b_i^2 a_j^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{i=1}^n \sum_{j=1}^n a_i^2 b_j^2 - {1 \over 2} a_i^2 b_j^2 + a_i b_i a_j b_j - {1 \over 2} b_i^2 a_j^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{i=1}^n \sum_{j=1}^n {1 \over 2} a_i^2 b_j^2 + a_i b_i a_j b_j - {1 \over 2} b_i^2 a_j^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j &\ne \sum_{i=1}^n \sum_{j=1}^n {1 \over 2} a_i^2 b_j^2 - {1 \over 2} b_i^2 a_j^2 + \sum_{i=1}^n \sum_{j=1}^n  a_i b_i a_j b_j \\\\
+\sum_{i=1}^n \sum_{j=1}^n a_i b_i a_j b_j - \sum_{i=1}^n \sum_{j=1}^n  a_i b_i a_j b_j &\ne \sum_{i=1}^n \sum_{j=1}^n {1 \over 2} a_i^2 b_j^2 - {1 \over 2} b_i^2 a_j^2 \\\\
+0 &\ne \sum_{i=1}^n \sum_{j=1}^n {1 \over 2} a_i^2 b_j^2 - {1 \over 2} b_i^2 a_j^2 \\\\
+0 &\ne \sum_{i=1}^n \sum_{j=1}^n a_i^2 b_j^2 - b_i^2 a_j^2 \\\\
+0 &\ne \sum_{i=1}^n \sum_{j=1}^n a_i^2 b_j^2 - \sum_{i=1}^n \sum_{j=1}^n b_i^2 a_j^2 \\\\
+\sum_{i=1}^n \sum_{j=1}^n b_i^2 a_j^2 &\ne \sum_{i=1}^n \sum_{j=1}^n a_i^2 b_j^2
+\end{align}$$
+The final inequality is false, as the right-hand side is simply a relabeling of the left-hand side. Therefore, the initial assumption is a contradiction.
+
+The Cauchy-Schwarz inequality is obvious from the equality, since the quantity \(\sum_{i=1}^n \sum_{j=1}^n (a_i b_j - b_i a_j)^2\) is always non-negative, being a sum of squares.
